@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title>AdminLTE 3 | Starter</title>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+<body class="hold-transition sidebar-mini text-sm">
+<div class="wrapper">
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <!-- <li class="nav-item d-none d-sm-inline-block">
+        <a href="index3.html" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">Contact</a>
+      </li> -->
+    </ul>
+
+    <!-- SEARCH FORM -->
+    <!-- <form class="form-inline ml-3">
+      <div class="input-group input-group-sm">
+        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-navbar" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </form> -->
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item dropdown show">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          Jorge Cuevas
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item text-black" href="#">Cambiar password</a>
+          <a class="dropdown-item" href="#">Salir</a>
+        </div>
+      </li>
+        </ul>
+      </li>
+      
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="index.html" class="brand-link">
+      <img src="dist/img/AdminLTELogo.png" alt="PMTracking Logo" class="brand-image img-circle elevation-3"
+           style="opacity: .8">
+      <span class="brand-text font-weight-light">PMTracking</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <!-- <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">Alexander Pierce</a>
+        </div>
+      </div> -->
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">
+              <i class="nav-icon fas fa-circle"></i>
+              <p>Inicio</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="client.html" class="nav-link">
+              <i class="nav-icon fas fa-user-friends"></i>
+              <p>Clientes</p>
+            </a>
+          </li>
+          <li class="nav-item has-treeview menu-open">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Gestion
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="projects.html" class="nav-link active">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Proyectos</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="milestones.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Hitos</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Proyectos</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Proyectos</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <div class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title"><i class="fas fa-search"></i> Buscador Proyectos</h3>
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i></button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+              
+                <div class="card-body">
+                  <form class="form-horizontal">
+                  <div class="row">
+                    <div class="form-group col-sm-4">
+                      <label for="inputEmail3" class="col-form-label">CRM</label>
+                        <input type="number" class="form-control form-control-sm" id="inputEmail3" placeholder="Nro. CRM">
+                    </div>
+                    <div class="form-group col-sm-4">
+                      <label for="inputEmail3" class="col-form-label">Cliente</label>
+                      <select class="form-control form-control-sm">
+                        <option>Seleccione...</option>
+                        <option>Clinica Alemana</option>
+                        <option>Finning</option>
+                        <option>Enel</option>
+                        <option>Hites</option>
+                        <option>PPU Legal</option>
+                        <option>Cambiaso</option>
+                        <option>Equifax</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-sm-4">
+                      <label for="inputEmail3" class="col-form-label">Nombre</label>
+                      <input type="text" class="form-control  form-control-sm" id="inputEmail3" placeholder="Nombre Proyecto">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-sm-4">
+                      <label for="inputEmail3" class="col-form-label">Jefe de Proyecto</label>
+                      <select class="form-control form-control-sm">
+                        <option>Seleccione...</option>
+                        <option>Christian Flores</option>
+                        <option>Fabiola Davila</option>
+                        <option>Francisco Urrutia</option>
+                        <option>Mario Casteletti</option>
+                        <option>Pedro Pozo</option>
+                        <option>Oscar Tapia</option>
+                        <option>Jorge Cuevas</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-sm-4">
+                      <label for="inputEmail3" class="col-form-label">Estado</label>
+                      <select class="form-control form-control-sm">
+                        <option>Seleccione...</option>
+                        <option>Nuevo</option>
+                        <option>En ejecución</option>
+                        <option>Etapa Cierre</option>
+                        <option>Cerrado</option>
+                        <option>Camino Ripio</option>
+                        <option>Freezing</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-sm-4">
+                      <label for="inputEmail3" class="col-form-label">Producto</label>
+                      <select class="form-control form-control-sm">
+                        <option>Seleccione...</option>
+                        <option>AzurianDTE</option>
+                        <option>Azurian Recepcion</option>
+                        <option>LCE</option>
+                        <option>Canales</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <button type="submit" class="btn btn-primary btn-sm">Buscar</button>
+                      <button type="reset" class="btn btn-default btn-sm">Cancelar</button>
+                    </div>
+                  </div>
+                </form>
+                </div>
+                <!-- /.card-body -->              
+            </div>
+
+            <div class="card">
+              <!-- <div class="card-header">
+                <h3 class="card-title">Lista de Proyectos</h3>
+              </div> -->
+              <!-- /.card-header -->
+              <div class="card-body">
+                <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                  <div class="row">
+                    <div class="col-sm-12 text-right">
+                      <a href="#" class="btn btn-success btn-sm"><i class="fas fa-plus"></i> Agregar Proyecto</a>
+                      <a href="#" class="btn btn-default btn-sm"><i class="fas fa-download"></i></a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <table id="example1" class="table table-hover compac dataTable dtr-inline projects" role="grid" aria-describedby="example1_info">
+                        <thead class="bg-primary">
+                          <tr role="row">
+                            <th tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">Producto</th>
+                            <th tabindex="0" aria-controls="example1" rowspan="1" colspan="1">CRM</th>
+                            <th tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Cliente</th>
+                            <th tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">Nombre</th>
+                            <th tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">Jefe Proyecto</th>
+                            <th tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">Estado</th>
+                            <th tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">% Avance</th>
+                            <th tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">Acción</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr role="row" class="odd">
+                            <td tabindex="0" class="sorting_1">DTE</td>
+                            <td>15555</td>
+                            <td>Caja Los Heroes</td>
+                            <td>Implementacion Factura Electronica</td>
+                            <td>Jorge Cuevas</td>
+                            <td><span class="badge badge-primary">En ejecución</span></td>
+                            <td class="project_progress">
+                              <div class="progress progress-xs">
+                                <div class="progress-bar bg-warning" style="width: 60%"></div>
+                              </div>
+                              <small>60% Completado</small>
+                            </td>
+                            <td class="project-actions">
+                              <a href="#" class="btn btn-default btn-sm" data-toggle="modal" data-target="#modal-xl"><i class="fas fa-info-circle"></i></a>
+                              <a href="#" class="btn btn-default btn-sm"><i class="far fa-edit"></i></a>
+                              <a href="#" class="btn btn-default btn-sm"><i class="far fa-folder"></i></a>
+                            </td>
+                          </tr>
+                          <tr role="row" class="odd">
+                            <td tabindex="0" class="sorting_1">DTE</td>
+                            <td>15555</td>
+                            <td>Caja Los Heroes</td>
+                            <td>Implementacion Factura Electronica</td>
+                            <td>Jorge Cuevas</td>
+                            <td><span class="badge badge-primary">En ejecución</span></td>
+                            <td class="project_progress">
+                              <div class="progress progress-xs">
+                                <div class="progress-bar bg-info" style="width: 25%"></div>
+                              </div>
+                              <small>25% Completado</small>
+                            </td>
+                            <td class="project-actions">
+                              <a href="#" class="btn btn-default btn-sm"><i class="fas fa-info-circle"></i></a>
+                              <a href="#" class="btn btn-default btn-sm"><i class="far fa-edit"></i></a>
+                              <a href="#" class="btn btn-default btn-sm"><i class="far fa-folder"></i></a>
+                            </td>
+                          </tr>
+                          <tr role="row" class="odd">
+                            <td tabindex="0" class="sorting_1">DTE</td>
+                            <td>15555</td>
+                            <td>Caja Los Heroes</td>
+                            <td>Implementacion Factura Electronica</td>
+                            <td>Jorge Cuevas</td>
+                            <td><span class="badge badge-warning">Etapa cierre</span></td>
+                            <td class="project_progress">
+                              <div class="progress progress-xs">
+                                <div class="progress-bar bg-success" style="width: 90%"></div>
+                              </div>
+                              <small>90% Completado</small>
+                            </td>
+                            <td class="project-actions">
+                              <a href="#" class="btn btn-default btn-sm"><i class="fas fa-info-circle"></i></a>
+                              <a href="#" class="btn btn-default btn-sm"><i class="far fa-edit"></i></a>
+                              <a href="#" class="btn btn-default btn-sm"><i class="far fa-folder"></i></a>
+                            </td>
+                          </tr>
+                          <tr role="row" class="odd">
+                            <td tabindex="0" class="sorting_1">DTE</td>
+                            <td>15555</td>
+                            <td>Caja Los Heroes</td>
+                            <td>Implementacion Factura Electronica</td>
+                            <td>Jorge Cuevas</td>
+                            <td><span class="badge badge-success">Cerrado</span></td>
+                            <td class="project_progress">
+                              <div class="progress progress-xs">
+                                <div class="progress-bar bg-success" style="width: 100%"></div>
+                              </div>
+                              <small>100% Completado</small>
+                            </td>
+                            <td class="project-actions">
+                              <a href="#" class="btn btn-default btn-sm"><i class="fas fa-info-circle"></i></a>
+                              <a href="#" class="btn btn-default btn-sm"><i class="far fa-edit"></i></a>
+                              <a href="#" class="btn btn-default btn-sm"><i class="far fa-folder"></i></a>
+                            </td>
+                          </tr>
+                          <tr role="row" class="odd">
+                            <td tabindex="0" class="sorting_1">DTE</td>
+                            <td>15555</td>
+                            <td>Caja Los Heroes</td>
+                            <td>Implementacion Factura Electronica</td>
+                            <td>Jorge Cuevas</td>
+                            <td><span class="badge badge-info">Nuevo</span></td>
+                            <td class="project_progress">
+                              <div class="progress progress-xs">
+                                <div class="progress-bar bg-info" style="width: 0%"></div>
+                              </div>
+                              <small>0% Completado</small>
+                            </td>
+                            <td class="project-actions">
+                              <a href="#" class="btn btn-default btn-sm"><i class="fas fa-info-circle"></i></a>
+                              <a href="#" class="btn btn-default btn-sm"><i class="far fa-edit"></i></a>
+                              <a href="#" class="btn btn-default btn-sm"><i class="far fa-folder"></i></a>
+                            </td>
+                          </tr>  
+                        </tbody>
+                    <!--  <tfoot>
+                      <tr><th rowspan="1" colspan="1">Rendering engine</th><th rowspan="1" colspan="1">Browser</th><th rowspan="1" colspan="1">Platform(s)</th><th rowspan="1" colspan="1">Engine version</th><th rowspan="1" colspan="1">CSS grade</th></tr>
+                      </tfoot> -->
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            
+          </div>
+          
+        </div>
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+    <div class="p-3">
+      <h5>Title</h5>
+      <p>Sidebar content</p>
+    </div>
+  </aside>
+  <!-- /.control-sidebar -->
+
+  <!-- Main Footer -->
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <!-- To the right -->
+    <!-- <div class="float-right d-none d-sm-inline">
+      Anything you want
+    </div> -->
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2020 <a href="#">PMTracking</a>.</strong> Todos los derechos reservados.
+  </footer>
+  <div id="sidebar-overlay"></div>
+</div>
+<!-- ./wrapper -->
+
+<div class="modal fade" id="modal-xl">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Detalle de Proyecto</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h3>Implementacion Factura Electronica</h3>
+        <dl class="row">
+          <dt class="col-sm-4 text-right">Estado:</dt><dd class="col-sm-8"><span class="badge badge-primary">En ejecución</span></dd>
+        </dl>
+        <dl class="row">
+          <dt class="col-sm-4 text-right">CRM:</dt><dd class="col-sm-2">15555</dd>
+          <dt class="col-sm-2 text-right">Fecha Inicio:</dt><dd class="col-sm-4">21-02-2020</dd>
+          <dt class="col-sm-4 text-right">Cliente:</dt><dd class="col-sm-2">Caja Los Heroes</dd>
+          <dt class="col-sm-2 text-right">Fecha Termino:</dt><dd class="col-sm-4">22-08-2020</dd>
+          <dt class="col-sm-4 text-right">Jefe de Proyecto:</dt><dd class="col-sm-2">Jorge Cuevas</dd>
+          <dt class="col-sm-2 text-right">Comercial:</dt><dd class="col-sm-4">Patricia Segura</dd>
+          <dt class="col-sm-4 text-right">Producto:</dt><dd class="col-sm-2">AzurianDTE</dd>
+          <dt class="col-sm-2 text-right">Cierre Optty:</dt><dd class="col-sm-4"><a href=""><i class="fas fa-external-link-alt"></i></a></dd>
+          <dt class="col-sm-4 text-right">Carpeta Proyecto:</dt><dd class="col-sm-2"><a href=""><i class="fas fa-external-link-alt"></i></a></dd>
+        </dl>
+        <dl class="row">
+          <dt class="col-sm-4 text-right">% Avance:</dt><dd class="col-sm-8">
+            <div class="progress progress-sm">
+              <div class="progress-bar bg-info" style="width: 25%"></div>
+            </div>
+          <small>25% Completado</small></dd>
+        </dl>
+        <div class="row">
+          <div class="col-sm-12">
+            <ul class="nav nav-tabs" id="custom-tabs-four-tab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="custom-tabs-four-home-tab" data-toggle="pill" href="#custom-tabs-four-home" role="tab" aria-controls="custom-tabs-four-home" aria-selected="true">Descripcion</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="custom-tabs-four-profile-tab" data-toggle="pill" href="#custom-tabs-four-bitacora" role="tab" aria-controls="custom-tabs-four-bitacora" aria-selected="false">Bitacora</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="custom-tabs-four-messages-tab" data-toggle="pill" href="#custom-tabs-four-hitos" role="tab" aria-controls="custom-tabs-four-hitos" aria-selected="false">Hitos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="custom-tabs-four-settings-tab" data-toggle="pill" href="#custom-tabs-four-ticket" role="tab" aria-controls="custom-tabs-four-ticket" aria-selected="false">Ticket</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="custom-tabs-four-settings-tab" data-toggle="pill" href="#custom-tabs-four-contactos" role="tab" aria-controls="custom-tabs-four-contactos" aria-selected="false">Contactos</a>
+              </li>
+            </ul>
+            <div class="tab-content" id="custom-tabs-four-tabContent">
+              <div class="tab-pane fade active show p-3" id="custom-tabs-four-home" role="tabpanel" aria-labelledby="custom-tabs-four-home-tab">
+                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada lacus ullamcorper dui molestie, sit amet congue quam finibus. Etiam ultricies nunc non magna feugiat commodo. Etiam odio magna, mollis auctor felis vitae, ullamcorper ornare ligula. Proin pellentesque tincidunt nisi, vitae ullamcorper felis aliquam id. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin id orci eu lectus blandit suscipit. Phasellus porta, ante et varius ornare, sem enim sollicitudin eros, at commodo leo est vitae lacus. Etiam ut porta sem. Proin porttitor porta nisl, id tempor risus rhoncus quis. In in quam a nibh cursus pulvinar non consequat neque. Mauris lacus elit, condimentum ac condimentum at, semper vitae lectus. Cras lacinia erat eget sapien porta consectetur. 
+              </div>
+              <div class="tab-pane fade p-3" id="custom-tabs-four-bitacora" role="tabpanel" aria-labelledby="custom-tabs-four-profile-tab">
+                <div class="row">
+                  <div class="col-12">
+                      <div class="post">
+                        <div class="user-block">
+                          <img class="img-circle img-bordered-sm" src="dist/img/user1-128x128.jpg" alt="user image">
+                          <span class="username">
+                            <a href="#">Jorge Cuevas</a>
+                          </span>
+                          <span class="description">21-04-2020 5:45 PM</span>
+                        </div>
+                        <!-- /.user-block -->
+                        <p>
+                          Lorem ipsum represents a long-held tradition for designers,
+                          typographers and the like. Some people hate it and argue for
+                          its demise, but others ignore.
+                        </p>
+                      </div>
+    
+                      <div class="post">
+                        <div class="user-block">
+                          <img class="img-circle img-bordered-sm" src="dist/img/user1-128x128.jpg" alt="user image">
+                          <span class="username">
+                            <a href="#">Jorge Cuevas</a>
+                          </span>
+                          <span class="description">21-04-2020 5:45 PM</span>
+                        </div>
+                        <!-- /.user-block -->
+                        <p>
+                          Lorem ipsum represents a long-held tradition for designers,
+                          typographers and the like. Some people hate it and argue for
+                          its demise, but others ignore.
+                        </p>
+                      </div>
+    
+                      <div class="post">
+                        <div class="user-block">
+                          <img class="img-circle img-bordered-sm" src="dist/img/user1-128x128.jpg" alt="user image">
+                          <span class="username">
+                            <a href="#">Jorge Cuevas</a>
+                          </span>
+                          <span class="description">21-04-2020 5:45 PM</span>
+                        </div>
+                        <!-- /.user-block -->
+                        <p>
+                          Lorem ipsum represents a long-held tradition for designers,
+                          typographers and the like. Some people hate it and argue for
+                          its demise, but others ignore.
+                        </p>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade p-3" id="custom-tabs-four-hitos" role="tabpanel" aria-labelledby="custom-tabs-four-messages-tab">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <table class="table">
+                      <thead class="bg-primary">
+                        <tr>
+                          <th>%</th>
+                          <th>Descripcion</th>
+                          <th>Cuota</th>
+                          <th>Monto UF</th>
+                          <th>Estado</th>
+                          <th>Dependencia</th>
+                          <th>Observación</th>
+                          <th>Fecha Actualización</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>20</td>
+                          <td>Entrega diseño</td>
+                          <td>1 de 5</td>
+                          <td>200</td>
+                          <td><span class="badge bg-success">Facturado</span></td>
+                          <td>Proyecto</td>
+                          <td>Cliente dio ok a documento de diseño</td>
+                          <td>21-04-2020</td>
+                        </tr>
+                        <tr>
+                          <td>20</td>
+                          <td>Entrega desarrollos</td>
+                          <td>2 de 5</td>
+                          <td>200</td>
+                          <td><span class="badge bg-warning">Condicional</span></td>
+                          <td>Desarrollo</td>
+                          <td>Pendiente entrega ticket PD-440</td>
+                          <td>05-05-2020</td>
+                        </tr>
+                        <tr>
+                          <td>20</td>
+                          <td>Aceptacion pruebas</td>
+                          <td>3 de 5</td>
+                          <td>200</td>
+                          <td><span class="badge bg-primary">Pendiente</span></td>
+                          <td>N/A</td>
+                          <td>--</td>
+                          <td>--</td>
+                        </tr>
+                        <tr>
+                          <td>20</td>
+                          <td>Paso a producción</td>
+                          <td>4 de 5</td>
+                          <td>200</td>
+                          <td><span class="badge bg-primary">Pendiente</span></td>
+                          <td>N/A</td>
+                          <td>--</td>
+                          <td>--</td>
+                        </tr>
+                        <tr>
+                          <td>20</td>
+                          <td>1er mes inicio operación</td>
+                          <td>5 de 5</td>
+                          <td>200</td>
+                          <td><span class="badge bg-primary">Pendiente</span></td>
+                          <td>N/A</td>
+                          <td>--</td>
+                          <td>--</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- /.card-body -->
+                </div>
+              </div>
+              <div class="tab-pane fade p-3" id="custom-tabs-four-ticket" role="tabpanel" aria-labelledby="custom-tabs-four-settings-tab">
+                 Pellentesque vestibulum commodo nibh nec blandit. Maecenas neque magna, iaculis tempus turpis ac, ornare sodales tellus. Mauris eget blandit dolor. Quisque tincidunt venenatis vulputate. Morbi euismod molestie tristique. Vestibulum consectetur dolor a vestibulum pharetra. Donec interdum placerat urna nec pharetra. Etiam eget dapibus orci, eget aliquet urna. Nunc at consequat diam. Nunc et felis ut nisl commodo dignissim. In hac habitasse platea dictumst. Praesent imperdiet accumsan ex sit amet facilisis. 
+              </div>
+              <div class="tab-pane fade p-3" id="custom-tabs-four-contactos" role="tabpanel" aria-labelledby="custom-tabs-four-settings-tab">
+                <div class="row">
+                <div class="col-sm-6">
+                  <div class="card bg-light">
+                    <div class="card-header text-muted border-bottom-0">
+                      Jefa de Proyectos
+                    </div>
+                    <div class="card-body pt-0">
+                      <div class="row">
+                        <div class="col-7">
+                          <h2 class="lead"><b>Yoanly Navas</b></h2>
+                          <ul class="ml-4 mb-0 fa-ul text-muted">
+                            <li class="small"><span class="fa-li"><i class="fas fa-lg fa-envelope"></i></span>ynavasm@losheroes.cl</li>
+                            <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> + 56 2 2620 2020</li>
+                          </ul>
+                        </div>
+                        
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <div class="text-right">
+                        <a href="#" class="btn btn-sm btn-primary">
+                          <i class="fas fa-user"></i> Editar
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <div class="card bg-light">
+                    <div class="card-header text-muted border-bottom-0">
+                      Jefa de Proyectos
+                    </div>
+                    <div class="card-body pt-0">
+                      <div class="row">
+                        <div class="col-7">
+                          <h2 class="lead"><b>Yoanly Navas</b></h2>
+                          <ul class="ml-4 mb-0 fa-ul text-muted">
+                            <li class="small"><span class="fa-li"><i class="fas fa-lg fa-envelope"></i></span>ynavasm@losheroes.cl</li>
+                            <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> + 56 2 2620 2020</li>
+                          </ul>
+                        </div>
+                        
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <div class="text-right">
+                        <a href="#" class="btn btn-sm btn-primary">
+                          <i class="fas fa-user"></i> Editar
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+             </div>
+            </div>
+          </div>
+        </div>
+          
+        
+      </div>
+      <!-- <div class="modal-footer justify-content-between">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<!-- REQUIRED SCRIPTS -->
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
+<!-- DataTables -->
+<script src="plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<!-- page script -->
+<script>
+  $(function () {
+    /* $('#example1').dataTable( {
+      "language": {
+          "url": "plugins/datatables/i18n/Spanish.json"
+      }
+    } ); */
+    $("#example1").DataTable({
+      "language": {
+        "sLengthMenu":     "Mostrar _MENU_ registros",
+                "sZeroRecords":    "No se encontraron resultados",
+                "sEmptyTable":     "Ningún dato disponible en esta tabla =(",
+                "sInfo":           "Del _START_ al _END_ de un total de _TOTAL_ registros",
+                "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
+                "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
+                "sInfoPostFix":    "",
+                "sSearch":         "Buscar:",
+                "sUrl":            "",
+                "sInfoThousands":  ",",
+                "sLoadingRecords": "Cargando...",
+                "oPaginate": {
+                    "sFirst":    "Primero",
+                    "sLast":     "Último",
+                    "sNext":     "Siguiente",
+                    "sPrevious": "Anterior"
+                }
+        },
+      "responsive": true,
+      "autoWidth": false,
+      "searching": false,
+      "ordering": false,
+      "lengthMenu": [5, 10, 20, 50, 100],
+    });
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+</script>
+</body>
+</html>
