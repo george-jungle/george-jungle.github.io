@@ -102,13 +102,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
           </li>
           <li class="nav-item">
-            <a href="clients.html" class="nav-link">
+            <a href="clients.html" class="nav-link active">
               <i class="nav-icon fas fa-user-friends"></i>
               <p>Clientes</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="projects.html" class="nav-link active">
+            <a href="projects.html" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>Proyectos</p>
             </a>
@@ -133,12 +133,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Proyectos</h1>
+            <h1 class="m-0 text-dark">Clientes</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Proyectos</li>
+              <li class="breadcrumb-item active">Clientes</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -154,7 +154,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Nuevo Proyecto</h3>
+                <h3 class="card-title">Nuevo Cliente</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -162,75 +162,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="card-body">
                   <form class="form-horizontal">
                     <div class="form-group row">
-                      <label for="inputEmail3" class="col-sm-2 col-form-label text-right">CRM</label>
-                        <input type="number" class="form-control form-control-sm col-sm-4" id="inputEmail3" placeholder="Nro. CRM" maxlength="5">
-                    </div>
-                    <div class="form-group row">
                       <label for="inputEmail3" class="col-sm-2 col-form-label text-right">Nombre</label>
-                      <input type="text" class="form-control  form-control-sm col-sm-4" id="inputEmail3" placeholder="Nombre Proyecto" maxlength="100">
+                        <input type="number" class="form-control form-control-sm col-sm-4" id="inputEmail3" placeholder="Nombre cliente" maxlength="5">
                     </div>
-                    <div class="form-group row">
-                      <label for="inputEmail3" class="col-sm-2 col-form-label text-right">Cliente</label>
-                      <select class="form-control form-control-sm col-sm-4">
-                        <option>Seleccione...</option>
-                        <option>Clinica Alemana</option>
-                        <option>Finning</option>
-                        <option>Enel</option>
-                        <option>Hites</option>
-                        <option>PPU Legal</option>
-                        <option>Cambiaso</option>
-                        <option>Equifax</option>
-                      </select>
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <a href="clients.html" class="btn btn-primary btn-sm">Crear</a>
+                        <button type="reset" class="btn btn-default btn-sm">Cancelar</button>
+                      </div>
                     </div>
-                    <div class="form-group row">
-                      <label for="inputEmail3" class="col-sm-2 col-form-label text-right">Jefe de Proyecto</label>
-                      <select class="form-control form-control-sm col-sm-4">
-                        <option>Seleccione...</option>
-                        <option>Christian Flores</option>
-                        <option>Fabiola Davila</option>
-                        <option>Francisco Urrutia</option>
-                        <option>Mario Casteletti</option>
-                        <option>Pedro Pozo</option>
-                        <option>Oscar Tapia</option>
-                        <option>Jorge Cuevas</option>
-                      </select>
-                    </div>
-                    <div class="form-group row">
-                      <label for="inputEmail3" class="col-sm-2 col-form-label text-right">Carpeta Proyecto</label>
-                      <input type="text" class="form-control  form-control-sm col-sm-4" id="inputEmail3" placeholder="URL Carpeta Proyecto" maxlength="100">
-                    </div>
-                    <div class="form-group row">
-                      <label for="inputEmail3" class="col-sm-2 col-form-label text-right">Comercial</label>
-                      <select class="form-control form-control-sm col-sm-4">
-                        <option>Seleccione...</option>
-                        <option>Patricia Segura</option>
-                        <option>Sergio Olivares</option>
-                      </select>
-                    </div>
-                    <div class="form-group row">
-                      <label for="inputEmail3" class="col-sm-2 col-form-label text-right">Cierre Optty</label>
-                      <input type="text" class="form-control  form-control-sm col-sm-4" id="inputEmail3" placeholder="URL Carpeta Cierre Optty" maxlength="100">
-                    </div>
-                    <div class="form-group row">
-                      <label for="inputEmail3" class="col-sm-2 col-form-label text-right">Producto</label>
-                      <select class="form-control form-control-sm col-sm-4">
-                        <option>Seleccione...</option>
-                        <option>AzurianDTE</option>
-                        <option>Azurian Recepcion</option>
-                        <option>LCE</option>
-                        <option>Canales</option>
-                      </select>
-                    </div>
-                    <div class="form-group row">
-                      <label for="inputEmail3" class="col-sm-2 col-form-label text-right">Descripción</label>
-                      <textarea class="form-control  form-control-sm col-sm-4" id="inputEmail3" placeholder="Descripción del Proyecto"></textarea>
-                    </div>
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <a href="projects.html" class="btn btn-primary btn-sm">Crear</a>
-                      <button type="reset" class="btn btn-default btn-sm">Cancelar</button>
-                    </div>
-                  </div>
                 </form>
                 </div>
                 <!-- /.card-body -->              
