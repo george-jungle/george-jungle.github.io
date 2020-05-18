@@ -16,6 +16,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- DataTables -->
   <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
@@ -23,6 +25,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Select2 -->
   <link rel="stylesheet" href="plugins/select2/css/select2.min.css">
   <link rel="stylesheet" href="plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
   <style>
     .badge {
         display: inline-block;
@@ -230,6 +234,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       <label for="inputEmail3" class="col-form-label">Cliente</label>
                       <select class="form-control form-control-sm select2" style="width: 100%;">
                         <option selected>Seleccione...</option>
+                        <option>IBM</option>
                         <option>Clinica Alemana</option>
                         <option>Finning</option>
                         <option>Enel</option>
@@ -237,6 +242,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <option>PPU Legal</option>
                         <option>Cambiaso</option>
                         <option>Equifax</option>
+                        <option>Aguas Andinas</option>
+                        <option>Camara Chilena</option>
+                        <option>Caja Los Heroes</option>
+                        <option>TMLUC</option>
+                        <option>Enap</option>
+                        <option>Nissan</option>
+                        <option>Wood</option>
                       </select>
                     </div>
                     <div class="form-group col-sm-4">
@@ -301,8 +313,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4">
                   <div class="row">
                     <div class="col-sm-12 text-right">
-                      <a href="projects-add.html" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Agregar Proyecto</a>
-                      <a href="#" class="btn btn-default btn-sm"><i class="fas fa-download"></i> Descargar CSV</a>
+                      <a href="projects-add.html" class="btn btn-primary btn-sm"><i class="fas fa-plus pr-1"></i>Agregar Proyecto</a>
+                      <a href="#" class="btn btn-default btn-sm"><i class="fas fa-download pr-1"></i>Descargar CSV</a>
                     </div>
                   </div>
                   <div class="row">
@@ -310,18 +322,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       <table id="example1" class="table table-hover compac dataTable dtr-inline projects" role="grid" aria-describedby="example1_info">
                         <thead class="bg-primary">
                           <tr role="row">
-                            <th tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">Producto</th>
-                            <th tabindex="0" aria-controls="example1" rowspan="1" colspan="1">CRM</th>
-                            <th tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Cliente</th>
-                            <th tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">Nombre</th>
-                            <th tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">Jefe Proyecto</th>
-                            <th tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">Estado</th>
-                            <th tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">Progreso</th>
-                            <th tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">Acción</th>
+                            <th>Plan</th>
+                            <th>Producto</th>
+                            <th>CRM</th>
+                            <th>Cliente</th>
+                            <th>Nombre</th>
+                            <th>Jefe Proyecto</th>
+                            <th>Estado</th>
+                            <th>Progreso</th>
+                            <th>Acción</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr role="row" class="odd">
+                            <td><i class="fas fa-clock text-success" rel="tooltip" data-original-title="A tiempo"></i></td>
                             <td tabindex="0" class="sorting_1">DTE</td>
                             <td>15555</td>
                             <td>Caja Los Heroes</td>
@@ -336,12 +350,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                               </div>
                             </td>
                             <td class="project-actions">
-                              <a href="#" class="btn btn-default btn-sm" data-toggle="modal" data-target="#modal-xl"><i class="fas fa-info-circle"></i></a>
-                              <a href="#" class="btn btn-default btn-sm"><i class="far fa-edit"></i></a>
-                              <a href="#" class="btn btn-default btn-sm"><i class="far fa-folder"></i></a>
+                              <a href="#" class="btn btn-default btn-sm" data-toggle="modal" rel="tooltip" data-target="#modal-xl" data-original-title="Ver"><i class="fas fa-info-circle"></i></a>
+                              <a href="projects-edit.html" class="btn btn-default btn-sm" rel="tooltip" data-original-title="Editar"><i class="far fa-edit"></i></a>
+                              <a href="#" class="btn btn-default btn-sm" data-toggle="modal" data-target="#modal-add-comments" rel="tooltip" data-original-title="Agregar bitacora"><i class="fas fa-list"></i></a>
                             </td>
                           </tr>
                           <tr role="row" class="odd">
+                            <td><i class="fas fa-clock text-warning" rel="tooltip" data-original-title="Atrasado"></i></td>
                             <td tabindex="0" class="sorting_1">DTE</td>
                             <td>15555</td>
                             <td>Caja Los Heroes</td>
@@ -362,6 +377,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </td>
                           </tr>
                           <tr role="row" class="odd">
+                            <td><i class="fas fa-clock text-danger" rel="tooltip" data-original-title="Muy atrasado"></i></td>
                             <td tabindex="0" class="sorting_1">DTE</td>
                             <td>15555</td>
                             <td>Caja Los Heroes</td>
@@ -382,6 +398,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </td>
                           </tr>
                           <tr role="row" class="odd">
+                            <td><i class="fas fa-clock text-success" rel="tooltip" data-original-title="A tiempo"></i></td>
                             <td tabindex="0" class="sorting_1">DTE</td>
                             <td>15555</td>
                             <td>Caja Los Heroes</td>
@@ -402,6 +419,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </td>
                           </tr>
                           <tr role="row" class="odd">
+                            <td><i class="fas fa-clock text-warning" rel="tooltip" data-original-title="A tiempo"></i></td>
                             <td tabindex="0" class="sorting_1">DTE</td>
                             <td>15555</td>
                             <td>Caja Los Heroes</td>
@@ -471,34 +489,43 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Detalle de Proyecto</h5>
+        <h6 class="modal-title">Detalle de Proyecto</h6>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <h3>Implementacion Factura Electronica</h3>
-        <dl class="row">
-          <dt class="col-sm-4 text-right">Estado:</dt><dd class="col-sm-8"><span class="badge badge-primary">En ejecución</span></dd>
-        </dl>
-        <dl class="row">
-          <dt class="col-sm-4 text-right">CRM:</dt><dd class="col-sm-2">15555</dd>
-          <dt class="col-sm-2 text-right">Fecha Inicio:</dt><dd class="col-sm-4">21-02-2020</dd>
-          <dt class="col-sm-4 text-right">Cliente:</dt><dd class="col-sm-2">Caja Los Heroes</dd>
-          <dt class="col-sm-2 text-right">Fecha Termino:</dt><dd class="col-sm-4">22-08-2020</dd>
-          <dt class="col-sm-4 text-right">Jefe de Proyecto:</dt><dd class="col-sm-2">Jorge Cuevas</dd>
-          <dt class="col-sm-2 text-right">Comercial:</dt><dd class="col-sm-4">Patricia Segura</dd>
-          <dt class="col-sm-4 text-right">Producto:</dt><dd class="col-sm-2">AzurianDTE</dd>
-          <dt class="col-sm-2 text-right">Cierre Optty:</dt><dd class="col-sm-4"><a href=""><i class="fas fa-external-link-alt"></i></a></dd>
-          <dt class="col-sm-4 text-right">Carpeta Proyecto:</dt><dd class="col-sm-2"><a href=""><i class="fas fa-external-link-alt"></i></a></dd>
-        </dl>
-        <dl class="row">
-          <dt class="col-sm-4 text-right">% Avance:</dt><dd class="col-sm-8">
-            <div class="progress progress-sm">
-              <div class="progress-bar bg-info" style="width: 25%"></div>
-            </div>
-          <small>25% Completado</small></dd>
-        </dl>
+        <h3 class="pb-4">Implementacion Factura Electronica</h3>
+        <div class="row">
+          <div class="col-sm-6">
+            <dl class="row">
+              <dt class="col-sm-3">Progreso:</dt><dd class="col-sm-9">
+                <div class="progress progress-lg">
+                  <div class="progress-bar bg-info" style="width: 25%"></div>
+                  <span class="progress-value">25%</span>
+                </div>
+              </dd>
+              <dt class="col-sm-3">Estado:</dt><dd class="col-sm-9"><span class="badge badge-primary">En ejecución</span></dd>
+              <dd class="col-sm-6 text-right pt-3"><a href="#" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Carpeta Proyecto</a></dd>
+              <dd class="col-sm-6 pt-3"><a href="#" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Cierre Optty</a></dd>
+            </dl>
+          </div>
+          <div class="col-sm-3 pl-2">
+            <dl>
+              <dt>Jefe de Proyecto</dt><dd>Jorge Cuevas</dd>
+              <dt>CRM</dt><dd>15555</dd>
+              <dt>Cliente</dt><dd>Caja Los Heroes</dd>
+              <dt>Producto</dt><dd>AzurianDTE</dd>
+            </dl>
+          </div>
+          <div class="col-sm-3">
+            <dl>
+              <dt>Comercial</dt><dd>Patricia Segura</dd>
+              <dt>Fecha Inicio</dt><dd>21-02-2020</dd>
+              <dt>Fecha Termino</dt><dd>22-08-2020</dd>
+            </dl>
+          </div>
+        </div>
         <div class="row">
           <div class="col-sm-12">
             <ul class="nav nav-tabs" id="custom-tabs-four-tab" role="tablist">
@@ -581,7 +608,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <table class="table">
                       <thead class="bg-primary">
                         <tr>
-                          <th>%</th>
                           <th>Descripcion</th>
                           <th>Cuota</th>
                           <th>Monto UF</th>
@@ -593,7 +619,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       </thead>
                       <tbody>
                         <tr>
-                          <td>20</td>
                           <td>Entrega diseño</td>
                           <td>1 de 5</td>
                           <td>200</td>
@@ -603,7 +628,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                           <td>21-04-2020</td>
                         </tr>
                         <tr>
-                          <td>20</td>
                           <td>Entrega desarrollos</td>
                           <td>2 de 5</td>
                           <td>200</td>
@@ -613,7 +637,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                           <td>05-05-2020</td>
                         </tr>
                         <tr>
-                          <td>20</td>
                           <td>Aceptacion pruebas</td>
                           <td>3 de 5</td>
                           <td>200</td>
@@ -623,7 +646,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                           <td>--</td>
                         </tr>
                         <tr>
-                          <td>20</td>
                           <td>Paso a producción</td>
                           <td>4 de 5</td>
                           <td>200</td>
@@ -633,7 +655,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                           <td>--</td>
                         </tr>
                         <tr>
-                          <td>20</td>
                           <td>1er mes inicio operación</td>
                           <td>5 de 5</td>
                           <td>200</td>
@@ -726,6 +747,41 @@ scratch. This page gets rid of all links and provides the needed markup only.
 </div>
 <!-- /.modal -->
 
+
+<div class="modal fade" id="modal-add-comments">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h6 class="modal-title">Agregar Bitacora</h6>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal">
+          <div class="mb-3">
+            <textarea class="textarea" placeholder="Place some text here"
+                      style="width: 100%; height: 200px; font-size: 12px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <a href="projects.html" class="btn btn-primary btn-sm">Agregar</a>
+              <button type="reset" class="btn btn-default btn-sm">Cancelar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- <div class="modal-footer justify-content-between">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
 <!-- REQUIRED SCRIPTS -->
 
 <!-- jQuery -->
@@ -741,8 +797,33 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
 <!-- Select2 -->
 <script src="plugins/select2/js/select2.full.min.js"></script>
+<!-- Summernote -->
+<script src="plugins/summernote/summernote-bs4.min.js"></script>
+<script src="plugins/summernote/lang/summernote-es-ES.js"></script>
 <!-- page script -->
 <script>
+  $(function () {
+    // Summernote
+    $('.textarea').summernote({
+      dialogsInBody: true,
+      height:200,
+      lang: 'es-ES', // default: 'en-US'
+      toolbar: [
+        // [groupName, [list of button]]
+        ['style', ['style']],
+        ['font', ['bold', 'underline', 'clear']],
+        ['fontname', ['fontname']],
+        ['color', ['color']],
+        ['para', ['ul', 'ol', 'paragraph']],
+        ['table', ['table']],
+        ['insert', ['link', 'picture']],
+        ['view', ['codeview', 'help']],
+      ]
+    })
+  });
+  $(document).ready(function(){
+    $('[rel="tooltip"]').tooltip({trigger: "hover"});
+  });
   $(function () {
     /* $('#example1').dataTable( {
       "language": {
