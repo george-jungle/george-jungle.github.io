@@ -153,8 +153,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <div class="col-lg-12">
             
             <div class="card">
-              <div class="card-header">
-                <h3 class="card-title"><i class="fas fa-search"></i> Buscador Hitos</h3>
+              <div class="card-header bg-primary">
+                <h3 class="card-title">Buscador Hitos</h3>
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse">
                     <i class="fas fa-minus"></i></button>
@@ -246,9 +246,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="card-body">
                 <div class="row">
                   <div class="col-sm-12">
-                    <table class="table">
-                      <thead class="bg-primary">
-                        <tr>
+                    <table id="example1" class="table table-hover compac dataTable dtr-inline projects" role="grid" aria-describedby="example1_info">
+                      <thead>
+                        <tr role="row">
                           <th>Area</th>
                           <th>CRM</th>
                           <th>Descripcion</th>
@@ -258,7 +258,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                           <th>Dependencia</th>
                           <th>Observación</th>
                           <th>Fecha Actualización</th>
-                          <th style="width: 100px;">Acción</th>
+                          <th style="width: 70px;">Acción</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -403,6 +403,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
           "url": "plugins/datatables/i18n/Spanish.json"
       }
     } ); */
+    //Initialize Select2 Elements
+    $('.select2').select2()
+
+    //Initialize Select2 Elements
+    $('.select2bs4').select2({
+      theme: 'bootstrap4'
+    })
+
     $("#example1").DataTable({
       "language": {
         "sLengthMenu":     "Mostrar _MENU_ registros",
@@ -429,15 +437,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       "ordering": false,
       "lengthMenu": [5, 10, 20, 50, 100],
     });
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-      "responsive": true,
-    });
+
   });
 </script>
 </body>

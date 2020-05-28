@@ -22,6 +22,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Select2 -->
   <link rel="stylesheet" href="plugins/select2/css/select2.min.css">
   <link rel="stylesheet" href="plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
@@ -79,6 +80,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
         text-align: center;
         font-size: 11px;
     }
+    .btn-options {
+        color: #6c757d;
+        padding: 0;
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
   </style>
 </head>
 <body class="hold-transition sidebar-mini text-sm">
@@ -118,8 +128,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
           Jorge Cuevas
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item text-black" href="#">Cambiar password</a>
-          <a class="dropdown-item" href="index.html">Salir</a>
+          <a class="dropdown-item text-primary" href="#">Cambiar password</a>
+          <a class="dropdown-item text-primary href="index.html">Salir</a>
         </div>
       </li>
         </ul>
@@ -213,8 +223,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <div class="col-lg-12">
 
             <div class="card">
-              <div class="card-header">
-                <h3 class="card-title"><i class="fas fa-search"></i> Buscador Proyectos</h3>
+              <div class="card-header bg-primary">
+                <h3 class="card-title">Buscador Proyectos</h3>
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse">
                     <i class="fas fa-minus"></i></button>
@@ -320,7 +330,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <div class="row">
                     <div class="col-sm-12">
                       <table id="example1" class="table table-hover compac dataTable dtr-inline projects" role="grid" aria-describedby="example1_info">
-                        <thead class="bg-primary">
+                        <thead>
                           <tr role="row">
                             <th>Plan</th>
                             <th>Producto</th>
@@ -366,7 +376,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <td class="project_progress">
                               <div class="progress progress-lg">
                                 <div class="progress-bar bg-info" style="width: 25%">
-                                  <span class="progress-value">25%</span>
+                                  <span class="progress-value text-secondary">25%</span>
                                 </div>
                               </div>
                             </td>
@@ -429,7 +439,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <td class="project_progress">
                               <div class="progress progress-lg">
                                 <div class="progress-bar bg-info" style="width: 0%">
-                                  <span class="progress-value">0%</span>
+                                  <span class="progress-value text-secondary">0%</span>
                                 </div>
                               </div>
                             </td>
@@ -488,49 +498,22 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <div class="modal fade" id="modal-xl">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
-      <div class="modal-header">
+      <div class="modal-header bg-primary">
         <h6 class="modal-title">Detalle de Proyecto</h6>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+          <i class="material-icons">close</i>
         </button>
       </div>
       <div class="modal-body">
         <h3 class="pb-4">Implementacion Factura Electronica</h3>
-        <div class="row">
-          <div class="col-sm-6">
-            <dl class="row">
-              <dt class="col-sm-3">Progreso:</dt><dd class="col-sm-9">
-                <div class="progress progress-lg">
-                  <div class="progress-bar bg-info" style="width: 25%"></div>
-                  <span class="progress-value">25%</span>
-                </div>
-              </dd>
-              <dt class="col-sm-3">Estado:</dt><dd class="col-sm-9"><span class="badge badge-primary">En ejecución</span></dd>
-              <dd class="col-sm-6 text-right pt-3"><a href="#" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Carpeta Proyecto</a></dd>
-              <dd class="col-sm-6 pt-3"><a href="#" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Cierre Optty</a></dd>
-            </dl>
-          </div>
-          <div class="col-sm-3 pl-2">
-            <dl>
-              <dt>Jefe de Proyecto</dt><dd>Jorge Cuevas</dd>
-              <dt>CRM</dt><dd>15555</dd>
-              <dt>Cliente</dt><dd>Caja Los Heroes</dd>
-              <dt>Producto</dt><dd>AzurianDTE</dd>
-            </dl>
-          </div>
-          <div class="col-sm-3">
-            <dl>
-              <dt>Comercial</dt><dd>Patricia Segura</dd>
-              <dt>Fecha Inicio</dt><dd>21-02-2020</dd>
-              <dt>Fecha Termino</dt><dd>22-08-2020</dd>
-            </dl>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12">
+        <div class="card card-primary card-outline card-outline-tabs">
+          <div class="card-header p-0 border-bottom-0">
             <ul class="nav nav-tabs" id="custom-tabs-four-tab" role="tablist">
               <li class="nav-item">
-                <a class="nav-link active" id="custom-tabs-four-home-tab" data-toggle="pill" href="#custom-tabs-four-home" role="tab" aria-controls="custom-tabs-four-home" aria-selected="true">Descripcion</a>
+                <a class="nav-link active" id="custom-tabs-four-home-tab" data-toggle="pill" href="#custom-tabs-four-home" role="tab" aria-controls="custom-tabs-four-home" aria-selected="true">Resumen</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="custom-tabs-four-profile-tab" data-toggle="pill" href="#custom-tabs-four-planificacion" role="tab" aria-controls="custom-tabs-four-planificacion" aria-selected="false">Planificación</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" id="custom-tabs-four-profile-tab" data-toggle="pill" href="#custom-tabs-four-bitacora" role="tab" aria-controls="custom-tabs-four-bitacora" aria-selected="false">Bitacora</a>
@@ -545,11 +528,51 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <a class="nav-link" id="custom-tabs-four-settings-tab" data-toggle="pill" href="#custom-tabs-four-contactos" role="tab" aria-controls="custom-tabs-four-contactos" aria-selected="false">Contactos</a>
               </li>
             </ul>
+          </div>
+          <div class="card-body">
             <div class="tab-content" id="custom-tabs-four-tabContent">
-              <div class="tab-pane fade active show p-3" id="custom-tabs-four-home" role="tabpanel" aria-labelledby="custom-tabs-four-home-tab">
-                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada lacus ullamcorper dui molestie, sit amet congue quam finibus. Etiam ultricies nunc non magna feugiat commodo. Etiam odio magna, mollis auctor felis vitae, ullamcorper ornare ligula. Proin pellentesque tincidunt nisi, vitae ullamcorper felis aliquam id. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin id orci eu lectus blandit suscipit. Phasellus porta, ante et varius ornare, sem enim sollicitudin eros, at commodo leo est vitae lacus. Etiam ut porta sem. Proin porttitor porta nisl, id tempor risus rhoncus quis. In in quam a nibh cursus pulvinar non consequat neque. Mauris lacus elit, condimentum ac condimentum at, semper vitae lectus. Cras lacinia erat eget sapien porta consectetur. 
+              <div class="tab-pane fade active show" id="custom-tabs-four-home" role="tabpanel" aria-labelledby="custom-tabs-four-home-tab">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <dl class="row">
+                      <dt class="col-sm-3">Progreso:</dt><dd class="col-sm-9">
+                        <div class="progress progress-lg">
+                          <div class="progress-bar bg-info" style="width: 25%"></div>
+                          <span class="progress-value text-secondary">25%</span>
+                        </div>
+                      </dd>
+                      <dt class="col-sm-3">Desviación:</dt><dd class="col-sm-9"><span class="badge badge-primary">10%</span></dd>
+                      <dt class="col-sm-3">Estado:</dt><dd class="col-sm-9"><span class="badge badge-primary badge-outlined">En ejecución</span></dd>
+                      <dd class="col-sm-6 text-right pt-3"><a href="#" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Carpeta Proyecto</a></dd>
+                      <dd class="col-sm-6 pt-3"><a href="#" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Cierre Optty</a></dd>
+                    </dl>
+                  </div>
+                  <div class="col-sm-3 pl-2">
+                    <dl>
+                      <dt>Jefe de Proyecto</dt><dd>Jorge Cuevas</dd>
+                      <dt>CRM</dt><dd>15555</dd>
+                      <dt>Cliente</dt><dd>Caja Los Heroes</dd>
+                      <dt>Producto</dt><dd>AzurianDTE</dd>
+                    </dl>
+                  </div>
+                  <div class="col-sm-3">
+                    <dl>
+                      <dt>Comercial</dt><dd>Patricia Segura</dd>
+                      <dt>Fecha Inicio</dt><dd>21-02-2020</dd>
+                      <dt>Fecha Termino</dt><dd>22-08-2020</dd>
+                    </dl>
+                  </div>
+                </div> 
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada lacus ullamcorper dui molestie, sit amet congue quam finibus. Etiam ultricies nunc non magna feugiat commodo. Etiam odio magna, mollis auctor felis vitae, ullamcorper ornare ligula. Proin pellentesque tincidunt nisi, vitae ullamcorper felis aliquam id. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin id orci eu lectus blandit suscipit. Phasellus porta, ante et varius ornare, sem enim sollicitudin eros, at commodo leo est vitae lacus. Etiam ut porta sem. Proin porttitor porta nisl, id tempor risus rhoncus quis. In in quam a nibh cursus pulvinar non consequat neque. Mauris lacus elit, condimentum ac condimentum at, semper vitae lectus. Cras lacinia erat eget sapien porta consectetur. </p>
               </div>
-              <div class="tab-pane fade p-3" id="custom-tabs-four-bitacora" role="tabpanel" aria-labelledby="custom-tabs-four-profile-tab">
+              <div class="tab-pane fade" id="custom-tabs-four-planificacion" role="tabpanel" aria-labelledby="custom-tabs-four-profile-tab">
+                <div class="row">
+                  <div class="col-12">
+                      Plan
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="custom-tabs-four-bitacora" role="tabpanel" aria-labelledby="custom-tabs-four-profile-tab">
                 <div class="row">
                   <div class="col-12">
                       <div class="post">
@@ -602,11 +625,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   </div>
                 </div>
               </div>
-              <div class="tab-pane fade p-3" id="custom-tabs-four-hitos" role="tabpanel" aria-labelledby="custom-tabs-four-messages-tab">
+              <div class="tab-pane fade" id="custom-tabs-four-hitos" role="tabpanel" aria-labelledby="custom-tabs-four-messages-tab">
+                <div class="row pb-3">
+                  <div class="col-sm-12 text-right">
+                    <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-plus pr-1"></i>Agregar</a>
+                  </div>
+                </div>
                 <div class="row">
                   <div class="col-sm-12">
                     <table class="table">
-                      <thead class="bg-primary">
+                      <thead class="">
                         <tr>
                           <th>Descripcion</th>
                           <th>Cuota</th>
@@ -615,6 +643,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                           <th>Dependencia</th>
                           <th>Observación</th>
                           <th>Fecha Actualización</th>
+                          <th>&nbsp;</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -626,6 +655,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                           <td>Proyecto</td>
                           <td>Cliente dio ok a documento de diseño</td>
                           <td>21-04-2020</td>
+                          <td>
+                            <button type="button" class="btn btn-secundary btn-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="material-icons" style="font-size: 20px;">more_vert</i>
+                              <div class="dropdown-menu">
+                                  <a href="#" class="dropdown-item text-primary">Editar</a>
+                              </div>
+                            </button> 
+                          </td>
                         </tr>
                         <tr>
                           <td>Entrega desarrollos</td>
@@ -635,6 +672,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                           <td>Desarrollo</td>
                           <td>Pendiente entrega ticket PD-440</td>
                           <td>05-05-2020</td>
+                          <td>
+                            <button type="button" class="btn btn-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="material-icons">more_vert</i>
+                              <div class="dropdown-menu">
+                                  <a href="#" class="dropdown-item text-primary">Editar</a>
+                              </div>
+                            </button> 
+                          </td>
                         </tr>
                         <tr>
                           <td>Aceptacion pruebas</td>
@@ -644,6 +689,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                           <td>N/A</td>
                           <td>--</td>
                           <td>--</td>
+                          <td>
+                            <button type="button" class="btn btn-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="material-icons">more_vert</i>
+                              <div class="dropdown-menu">
+                                  <a href="#" class="dropdown-item text-primary">Editar</a>
+                              </div>
+                            </button> 
+                          </td>
                         </tr>
                         <tr>
                           <td>Paso a producción</td>
@@ -653,6 +706,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                           <td>N/A</td>
                           <td>--</td>
                           <td>--</td>
+                          <td>
+                            <button type="button" class="btn btn-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="material-icons">more_vert</i>
+                              <div class="dropdown-menu">
+                                  <a href="#" class="dropdown-item text-primary">Editar</a>
+                              </div>
+                            </button> 
+                          </td>
                         </tr>
                         <tr>
                           <td>1er mes inicio operación</td>
@@ -662,6 +723,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                           <td>N/A</td>
                           <td>--</td>
                           <td>--</td>
+                          <td>
+                            <button type="button" class="btn btn-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="material-icons">more_vert</i>
+                              <div class="dropdown-menu">
+                                  <a href="#" class="dropdown-item text-primary">Editar</a>
+                              </div>
+                            </button> 
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -669,10 +738,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <!-- /.card-body -->
                 </div>
               </div>
-              <div class="tab-pane fade p-3" id="custom-tabs-four-ticket" role="tabpanel" aria-labelledby="custom-tabs-four-settings-tab">
+              <div class="tab-pane fade" id="custom-tabs-four-ticket" role="tabpanel" aria-labelledby="custom-tabs-four-settings-tab">
                  Pellentesque vestibulum commodo nibh nec blandit. Maecenas neque magna, iaculis tempus turpis ac, ornare sodales tellus. Mauris eget blandit dolor. Quisque tincidunt venenatis vulputate. Morbi euismod molestie tristique. Vestibulum consectetur dolor a vestibulum pharetra. Donec interdum placerat urna nec pharetra. Etiam eget dapibus orci, eget aliquet urna. Nunc at consequat diam. Nunc et felis ut nisl commodo dignissim. In hac habitasse platea dictumst. Praesent imperdiet accumsan ex sit amet facilisis. 
               </div>
-              <div class="tab-pane fade p-3" id="custom-tabs-four-contactos" role="tabpanel" aria-labelledby="custom-tabs-four-settings-tab">
+              <div class="tab-pane fade" id="custom-tabs-four-contactos" role="tabpanel" aria-labelledby="custom-tabs-four-settings-tab">
                 <div class="row">
                 <div class="col-sm-6">
                   <div class="card bg-light">
@@ -733,6 +802,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </div>
           </div>
         </div>
+
+
+   
           
         
       </div>
@@ -751,9 +823,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <div class="modal fade" id="modal-add-comments">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
-      <div class="modal-header">
+      <div class="modal-header bg-primary">
         <h6 class="modal-title">Agregar Bitacora</h6>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -864,15 +936,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       "ordering": false,
       "lengthMenu": [5, 10, 20, 50, 100],
     });
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-      "responsive": true,
-    });
+
   });
 </script>
 </body>

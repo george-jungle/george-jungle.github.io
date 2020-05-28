@@ -369,6 +369,8 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
   color: #666;
   margin-bottom: 15px;
   padding-bottom: 15px;
+  border-radius: 0.25rem;
+  background: #f4f6f9;
 }
 
 .post:last-of-type {
